@@ -1,0 +1,259 @@
+        <!DOCTYPE html>
+        <html lang="ru">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Ошибка подключения</title>
+<style>
+body { 
+font-family: 'Short Stack', sans-serif;  background-color: #202124;
+}
+
+#ss {
+background-color: #202124;
+width: 60%;
+height: 40px;
+border-radius: 0px;
+color: white;
+border: none;
+}
+
+.error {
+color: #999CA2;
+font-weight: 700;
+font-size: 20px;
+text-align: left;
+padding-left: 25px;
+margin-top: 120px;
+}
+
+.errortwo {
+color: #999CA2;
+font-weight: 500;
+margin-top: 30px;
+font-size: 15px;
+text-align: left;
+padding-left: 25px;
+font-family: "Arial", sans-serif;
+}
+
+.errorthree {
+color: #999CA2;
+font-weight: 500;
+margin-top: 30px;
+font-size: 15px;
+text-align: left;
+padding-left: 25px;
+}
+
+.errorfour {
+color: #999CA2;
+font-weight: 500;
+margin-top: -10px;
+font-size: 15px;
+text-align: left;
+padding-left: 25px;
+}
+
+.errorlogo {
+color: #999CA2;
+font-weight: 500;
+margin-top: 26px;
+font-size: 15px;
+text-align: left;
+padding-left: 25px;
+font-family: "Arial", sans-serif;
+}
+
+.reload {
+width: 91%;
+height: 50px;
+border-radius: 22px;
+background-color: #89B4F8;
+color: #30333A;
+text-align: center;
+border: none;
+font-size: 16px;
+margin-top: 100px;
+}
+
+.infos {
+color: #89B4F8;
+font-size: 15px;
+font-weight: 700;
+margin-top: 25px;
+}
+
+.logo {
+width: 150px;
+height: 150px;
+background-color: #303134;
+border-radius: 50%;
+color: white;
+font-size: 15px;
+text-align: center;
+border: none;
+}
+
+.off {
+width: 270px;
+height: 47px;
+background-color: #303134;
+color: white;
+text-align: center;
+border: none;
+position: absolute;
+top: 200px;
+left: 70px;
+border-radius: 5px;
+font-size: 14px;
+}
+.link {
+width: 90%;
+height: 46px;
+background-color: #303134;
+color: white;
+text-align: center;
+border: none;
+border-radius: 5px;
+font-size: 14px;
+position: absolute;
+top: 440px;
+left: 21px;
+}
+.biglogo {
+width: 93%;
+height: 100px;
+background-color: #303134;
+color: white;
+font-size: 20px;
+text-align: center;
+border: none;
+margin-top: 350px;
+}
+#tos {
+display: none;
+}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Short+Stack&display=swap" rel="stylesheet">
+</head>
+<body>
+<center>
+<div id="home">
+<h2 class="error">
+Не удается получить доступ к <br> сайту
+</h2>
+
+<h2 class="errortwo">
+Не удалось найти IP-адрес сервера <br> google.com
+</h2>
+
+<h2 class="errorthree">
+Попробуйте сделать следующее:
+</h2>
+
+<h2 class="errorfour">
+Проверьте подключение к интернету.</h2>
+
+<h2 class="errorlogo">
+ERR_TUNNEL_CONNECTION_FAILED
+</h2>
+
+<button class="reload" onclick="reload()">
+Перезагрузить
+</button>
+
+
+<h2 class="infos" onclick="infos()">
+Сведения
+</h2>
+
+
+<audio id="funSound" loop></audio>
+
+
+</div>
+
+<div id = "tos">
+<button class="logo">
+tg @sngtag_ru
+</button>
+
+<button class="off" onclick="off()">
+🔇 Заглушить
+</button>
+
+<button class="link" onclick="main()">
+Наш сайт
+</button>
+<button class="biglogo" onclick="blogo()">
+t.me/sngtag_ru
+</button>
+     <audio id="funSoundd" src="ston.mp3" loop=""></audio>
+</div>
+</center>
+<script>
+  var select = document.getElementById("ss");
+    var audio = document.getElementById("funSound");
+
+    audio.src = select.value;
+
+    select.addEventListener("change", function() {
+        audio.src = this.value;
+        audio.play();
+    });
+
+    audio.play();
+
+</script>
+<script>
+function infos() {
+window.open("https://t.me/sngtag_ru");
+}
+
+function reload() {
+const sound = document.getElementById('funSound');
+
+const h = document.getElementById("home");
+
+
+
+sound.volume = 1.0;
+sound.play()
+
+h.style.display = "none";
+
+if (h.style.display == "none") {
+
+document.getElementById("tos").style.display = "block";
+}
+}
+
+function off() {
+const sound = document.getElementById('funSound');
+
+const newS = document.getElementById('funSoundd');
+
+sound.volume = 1.0;
+sound.pause()
+
+window.open("https://t.me/sngtag_ru");
+newS.volume = 1.0;
+newS.play()
+
+}
+
+function blogo() {
+window.open("https://t.me/sngtag_ru");
+}
+
+function main() {
+window.open("https://sngtagmain.yhub.net");
+}
+
+</script>
+
+</body>
+</html>
